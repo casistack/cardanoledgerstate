@@ -145,6 +145,9 @@ edit the addleader.sh to match your environment
 
 
 
+# Please help support small pools by delegating to 
+
+[CARDISTACK (CSK)](https://adapools.org/pool/f510658bb80e3657f5b20b3f796d219552b57622e0208dd287ba620f)
 
 
 
