@@ -1,5 +1,4 @@
 version: "3.5"
-
 services:
   cardano-node:
     image: inputoutput/cardano-node:${CARDANO_NODE_VERSION:-1.26.2}
