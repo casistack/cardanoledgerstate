@@ -1,0 +1,28 @@
+version: "3.5"
+
+services:
+  cardano-node:
+    image: inputoutput/cardano-node:${CARDANO_NODE_VERSION:-1.26.2}
+    command: [
+      "run",
+      "--config", "/config/config.json",
+      "--database-path", "/data/db",
+      "--socket-path", "/ipc/node.socket",
+      "--topology", "/config/topology.json"
+    ]
+    volumes:
+      - ./config/network/${NETWORK:-mainnet}/cardano-node:/config
+      - ./config/network/${NETWORK:-mainnet}/genesis:/genesis
+      - node-${NETWORK:-mainnet}-db:/data/db
+      - ./node-${NETWORK:-mainnet}-ipc:/ipc
+      - .:/mydownloads
+    restart: on-failure
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "400k"
+        max-file: "20"
+volumes:
+  node-mainnet-db:
+  .node-mainnet-ipc:
+  node-mainnet-config:
