@@ -1,12 +1,14 @@
 # cardanoledgerstate Downloads
-This was created to help those who have limited memory on their cardano-nodes and therefore downloading the ledger state (cardano-cli query ledger-state --mainnet --out-file ledger.json) sometimes exhausts resources on nodes. 
-It's can also help in the automation to check leader logs in combination with Andrews cncli application https://github.com/AndrewWestberg/cncli/blob/develop/USAGE.md
+This was quickly created to help those who have limited memory on their cardano-nodes and therefore downloading the ledger state (cardano-cli query ledger-state --mainnet --out-file ledger.json) sometimes exhausts resources on nodes. 
+It can also be used for the automation to check leader logs in combination with Andrews cncli application https://github.com/AndrewWestberg/cncli/blob/develop/USAGE.md
+
+and to update grafana dashboard with a slot leader status.
 
 #### Note: 
 This was a quick put together, aka spaghetti code and therefore security and fine tuning has not been taking into consideration . 
 I have chosen to use FTP as the server for the ledgerstate uploads, however to make it secure , ftps or ssh using public keys could be used. 
-Modify this accordingly to suite your needs.
-The comms between all my nodes and transfer is locked down to specific IP's and ports. 
+Modify this accordingly to suite your needs and will hold no liabilty to any issues that may occur as a result of running the scripts specified here.
+The comms between all my nodes and transfer is locked down to specific IP's and ports for utmost security your environment may be different. 
 
 This repo clone includes some IOHK files used to build docker images. Technically , the only files required are the .sh a, docker-compose.yml
 
@@ -21,7 +23,10 @@ This repo clone includes some IOHK files used to build docker images. Technicall
 5.  upload ledgerstate
 6.  using cron, node downloads ledger state
 7.  Node  then runs leaderlogs checks using cncli an dumps output to json
-8.  Leader logs updates my grafana
+8.  stops node
+9.  deletes node socket if exists
+10.  removes all docker nodes references ready for next cron run
+11.  Leader logs updates my grafana
 
 ### prerequisites for this guide
 
@@ -35,11 +40,11 @@ This repo clone includes some IOHK files used to build docker images. Technicall
 1. ftpleader.sh ( modify accordingly if you chose to use ssh or ftps) 
 2. getleaderscript.sh (script to use in cronjob)
 3. getleaderdocker.sh ( script to sownload ledger state) 
-4. 
+ 
 
 ## Steps for FTP upload
 
-While this guide was configured using Linux users in mind, the is no reason why it cannot be adapted for Windows or Mac users.
+While this guide was configured using Linux users in mind, there is no reason why it cannot be adapted for Windows or Mac users.
 For windows users, you might be able to adapt it using the windows subsystem for linux https://docs.microsoft.com/en-us/windows/wsl/install-win10
 ie ubuntu from the Microsoft store. 
 
