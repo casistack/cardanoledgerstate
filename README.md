@@ -30,13 +30,14 @@ This repo clone includes some IOHK files used to build docker images. Technicall
 3. cron job
 4. jq and working grafana dashboard (optional)
 
-### Required files
+### Required files for FTP uploads
 
 1. ftpleader.sh ( modify accordingly if you chose to use ssh or ftps) 
 2. getleaderscript.sh (script to use in cronjob)
 3. getleaderdocker.sh ( script to sownload ledger state) 
+4. 
 
-## Steps
+## Steps for FTP upload
 
 While this guide was configured using Linux users in mind, the is no reason why it cannot be adapted for Windows or Mac users.
 For windows users, you might be able to adapt it using the windows subsystem for linux https://docs.microsoft.com/en-us/windows/wsl/install-win10
@@ -71,7 +72,7 @@ Better yet use ubuntu in a VM .
  - manually run the getleaderscript.sh script ./getleaderscript.sh  ( ensure your scripts are executable first if you get any errors chmod +x )
  - if all goes well, a new docker cardano node will be spawned, synced with the blockchain , a ledger dump taken and then upload to remote server.
 
-## Setting up cron schedule to dump leaderlogs to ftp(linux users)
+## Setting up cron schedule to upload leaderlogs to ftp(linux users)
 
 - type crontab -e
 - e.g to get the dump every 12.30am upload to frp and log
@@ -80,4 +81,55 @@ modify full path accordingly to match the files containing the scripts. Importan
 
 
 30 0 * * * /bin/bash /full path to you working directory/getleaderscript.sh > /full path to you working directory/cron.log
+
+
+## Required file for leader log checks
+
+- checkleader.sh   (copy this file to you node and amend to match your environment)
+- on your node mkdir to host the script or use exsting directory
+- ensure you have cncli configured and fullign synced. ideally you will have it confiured as a systemdservice 
+REF Andrew's work https://github.com/AndrewWestberg/cncli/blob/develop/USAGE.md
+- for downloading the ledgerstate from ftp, i allowed anonymous access to ftp server . you can modify to match your environment.
+- edit the checkleader.sh  make sure you use full path to where your files are located or cron will fail
+- after editting, manually run ./checkleader.sh this and cat leaderledger.json to ensure it works as desired.
+
+## Setting up cron schedule to check leaderlogs after downloading from ftp and dumping output to json
+
+Outlput can then be reviewed or configured to update grafana
+
+To get leader logs at 2.30 am and dump out configure similar to above
+
+30 2 * * * /bin/bash /fullpath/checkleader.sh > /full path for logs/checkleaderlogging.log
+
+## Integrating with Grafana
+
+if you already have a prom file configured to display adapools data on grafana
+
+https://crypto2099.io/adding-pool-stats-to-grafana-dashboard/
+
+all i did was use JQ  to extract data from leader logs
+
+edit the addleader.sh to match your environment
+
+- manually run the script to see if it works
+- in Grafana create the following for the dashboad. where corename is the alias if you have it configured
+  name = Slot assigned
+  metric = adapools_no{alias="corename"}
+  
+  name = Slot Number assigned
+  metric = adapools_slot{alias="corename"}
+  
+  name = Slot in Epoch assigned
+  metric = adapools_slotInEpoch{alias="corename"}
+  
+  Note . if you have no slot assigned output will  be " No data"
+  
+  
+- 
+
+
+
+
+
+
 
