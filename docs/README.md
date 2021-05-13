@@ -36,6 +36,7 @@ This repo clone includes some IOHK files used to build docker images with a modi
 3. cron job
 4. jq and working grafana dashboard (optional)
 5. build cardano-cli for docker
+6. Ensure node is fully synced
 
 ### Required files for FTP uploads
 
@@ -68,6 +69,20 @@ Better yet use ubuntu in a VM .
  [docker-compose](https://docs.docker.com/compose/install/)
  
  [docker](https://docs.docker.com/engine/install/)
+  
+ 
+ ## Manually run the docker image to initially sync blcokchain
+ 
+ ### Note:
+ 
+ you need to first sync the docker node to the blockchain or you will get 
+  "Command failed: query ledger-state  Error: This query cannot be used for the Byron era"
+ on a fresh run
+ 
+ - in your working directory run
+ docker-compose up -d --build && docker-compose logs -f
+ - view the logs till node is synced. 
+ - once synced bring down the node using docker-compose down
  
  
 
