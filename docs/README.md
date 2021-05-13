@@ -11,7 +11,7 @@ I have chosen to use FTP as the server for the ledgerstate uploads, however to m
 Modify this accordingly to suite your needs and will hold no liabilty to any issues that may occur as a result of running the scripts specified here.
 The comms between all my nodes and transfer is locked down to specific IP's and ports for utmost security your environment may be different. 
 
-This repo clone includes some IOHK files used to build docker images. Technically , the only files required are the .sh a, docker-compose.yml
+This repo clone includes some IOHK files used to build docker images with a modified docker-compose.yml
 
 
 
@@ -35,6 +35,7 @@ This repo clone includes some IOHK files used to build docker images. Technicall
 2. Docker and Docker-compose installed
 3. cron job
 4. jq and working grafana dashboard (optional)
+5. build cardano-cli for docker
 
 ### Required files for FTP uploads
 
