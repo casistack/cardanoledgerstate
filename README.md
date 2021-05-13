@@ -32,4 +32,13 @@ The comms between all my nodes and transfer is locked down to specific IP's and 
 2. getleaderscript.sh (script to use in cronjob)
 3. getleaderdocker.sh ( script to sownload ledger state) 
 
+## Steps
 
+- Clone this repo https://github.com/casistack/cardanoledgerstate.git
+- setup remote ftp server
+- -windows users can download a free ftp server https://www.serv-u.com/ftp-server-windows/server-setup#:~:text=Setting%20up%20an%20FTP%20site,-Navigate%20to%20Start&text=Once%20the%20IIS%20console%20is,click%20on%20Add%20FTP%20Site.&text=In%20the%20Binding%20and%20SSL,Start%20FTP%20Site%20Automatically%20option.
+- - linux users know what to do . I use proftpd
+- if you chose to use ssh instead ( recommended) configure using public key auth 
+ https://serverpilot.io/docs/how-to-use-ssh-public-key-authentication/
+ 
+ -
