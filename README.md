@@ -131,6 +131,10 @@ edit the addleader.sh to match your environment
   
   Note . if you have no slot assigned output will  be " No data"
   
+  ![slots](https://user-images.githubusercontent.com/69810998/118121544-8bd9f100-b3e9-11eb-86d0-ea26919c4997.jpg)
+
+  
+  
   
 ## Setup cron to update Grafana with assigned status
 
