@@ -1,0 +1,17 @@
+# General reviewers per PR
+#                       David          Duncan   Jordan     Luke       Erik   John
+*                       @DavidEichmann @dcoutts @Jimbo4350 @intricate @erikd @newhoggy
+
+# Specific reviewers for code pieces
+# NB - The last matching pattern takes precedence
+
+# /doc folder and README.* needs to be owned by @docs-access
+doc                          @docs-access
+README.*                     @docs-access
+
+.buildkite                   @devops
+ci                           @devops
+configuration                @devops
+nix                          @devops
+*.nix                        @devops
+bors.toml                    @devops

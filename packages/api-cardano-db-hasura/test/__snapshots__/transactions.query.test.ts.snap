@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transactions Can return aggregated data 1`] = `
+Object {
+  "transactions": Array [
+    Object {
+      "deposit": 0,
+      "fee": 171246,
+      "hash": "05ad8b467095e0886713a38231ab9fe84e4031a433a9400ebf70ec9415e20102",
+      "inputs_aggregate": Object {
+        "aggregate": Object {
+          "avg": Object {
+            "value": "4924799649906",
+          },
+          "count": "1",
+          "max": Object {
+            "value": "4924799649906",
+          },
+          "min": Object {
+            "value": "4924799649906",
+          },
+          "sum": Object {
+            "value": "4924799649906",
+          },
+        },
+      },
+      "outputs_aggregate": Object {
+        "aggregate": Object {
+          "avg": Object {
+            "value": "2462399739330",
+          },
+          "count": "2",
+          "max": Object {
+            "value": "4824799478660",
+          },
+          "min": Object {
+            "value": "100000000000",
+          },
+          "sum": Object {
+            "value": "4924799478660",
+          },
+        },
+      },
+    },
+    Object {
+      "deposit": 0,
+      "fee": 171070,
+      "hash": "e680432562b3b71fe44ca4eb8e29cb181d3a0858b3e2a643a55f7513d901bcae",
+      "inputs_aggregate": Object {
+        "aggregate": Object {
+          "avg": Object {
+            "value": "768403000000",
+          },
+          "count": "1",
+          "max": Object {
+            "value": "768403000000",
+          },
+          "min": Object {
+            "value": "768403000000",
+          },
+          "sum": Object {
+            "value": "768403000000",
+          },
+        },
+      },
+      "outputs_aggregate": Object {
+        "aggregate": Object {
+          "avg": Object {
+            "value": "384201414465",
+          },
+          "count": "2",
+          "max": Object {
+            "value": "768401828930",
+          },
+          "min": Object {
+            "value": "1000000",
+          },
+          "sum": Object {
+            "value": "768402828930",
+          },
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`transactions Can return filtered aggregated data 1`] = `
+Object {
+  "transactions": Array [
+    Object {
+      "hash": "e680432562b3b71fe44ca4eb8e29cb181d3a0858b3e2a643a55f7513d901bcae",
+      "inputs_aggregate": Object {
+        "aggregate": Object {
+          "count": "1",
+        },
+      },
+      "outputs_aggregate": Object {
+        "aggregate": Object {
+          "count": "1",
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`transactions Returns transactions by hashes 1`] = `
+Object {
+  "transactions": Array [
+    Object {
+      "block": Object {
+        "number": 29021,
+      },
+      "blockIndex": 1,
+      "deposit": 0,
+      "fee": 171070,
+      "hash": "e680432562b3b71fe44ca4eb8e29cb181d3a0858b3e2a643a55f7513d901bcae",
+      "inputs": Array [
+        Object {
+          "address": "DdzFFzCqrhsggyaAMAUTjGtjBr1CTp8tTcHYWbqtoyQBZcaYHM16rjbUDawTwoVaEPawAMPLJmpJVXHBNxZnTgmQzqAcNDe6XvMe5BkB",
+          "sourceTxHash": "74a10f4a5de09a393ef8b8f749c50e6938aa4f57908bbdaaefdf5e814fed281a",
+          "sourceTxIndex": 0,
+          "value": "768403000000",
+        },
+      ],
+      "inputs_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "value": "768403000000",
+          },
+        },
+      },
+      "outputs": Array [
+        Object {
+          "address": "DdzFFzCqrhsuz652nVpjktdtiV44uWJLHv83m61S33gzfB4TBx7SKp3DgM18fBJznMrbUdsEFEvXW4LYqVKFE9fjMgVhmJP2LBhUvEe8",
+          "index": 0,
+          "value": "768401828930",
+        },
+        Object {
+          "address": "DdzFFzCqrhsgrGt7zHydkE4cKxjB7SgsdnMPUFxYEwBu1u4sGobxZL5Xo3eDycCrtSYAUyw9aAsZZxFpTdgur6MwYDYMwAZ4xNGKRD3o",
+          "index": 1,
+          "value": "1000000",
+        },
+      ],
+      "outputs_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "value": "768402828930",
+          },
+        },
+      },
+      "size": 216,
+      "totalOutput": "768402828930",
+      "withdrawals_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "amount": null,
+          },
+        },
+      },
+    },
+    Object {
+      "block": Object {
+        "number": 4603616,
+      },
+      "blockIndex": 0,
+      "deposit": 0,
+      "fee": 175225,
+      "hash": "0b8c5be678209bb051a02904dd18896a929f9aca8aecd48850939a590175f7e8",
+      "inputs": Array [
+        Object {
+          "address": "addr1qyenqkgd5rjzfj4x66kgpw7xctald54swmxscgt26y0jyx9ms7x7wfk2xmekqj76value5k8ppjggssnkvpwal0cyq9qtf3dp7",
+          "sourceTxHash": "264a68d3be10af40fc51419fa53362835259816cfb3b1ca6459b8ec951c2c659",
+          "sourceTxIndex": 0,
+          "value": "3920534466",
+        },
+      ],
+      "inputs_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "value": "3920534466",
+          },
+        },
+      },
+      "outputs": Array [
+        Object {
+          "address": "addr1qy2d6t0rw32wu9yxhwx3a9hzt7tzwysy4ymlk6nh62f45z9ms7x7wfk2xmekqj76value5k8ppjggssnkvpwal0cyq9qmktzym",
+          "index": 0,
+          "value": "4072979066",
+        },
+        Object {
+          "address": "DdzFFzCqrhsvZTcS6vpcdH1Eg1YMFsaRPAyh2EmxbsQfRgBD75UHNHk7sR4vap2FvcUYtLCh5AfgqBdV4FzT5U3uMytB85tXhCaH8xUv",
+          "index": 1,
+          "value": "2000000",
+        },
+      ],
+      "outputs_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "value": "4074979066",
+          },
+        },
+      },
+      "size": 447,
+      "totalOutput": "4074979066",
+      "withdrawals_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "amount": "154619825",
+          },
+        },
+      },
+    },
+    Object {
+      "block": Object {
+        "number": 29021,
+      },
+      "blockIndex": 0,
+      "deposit": 0,
+      "fee": 171246,
+      "hash": "05ad8b467095e0886713a38231ab9fe84e4031a433a9400ebf70ec9415e20102",
+      "inputs": Array [
+        Object {
+          "address": "DdzFFzCqrht5ExAdoZVExXoZTpoMYGKxva3thvvvHapsLZQzSX3kCqwgqi5NSM2oUtHYYDqsSnvSGbqkarB6cSgDZohUhLWZ9KFdDWsa",
+          "sourceTxHash": "f6aa5241cdabb2ca461d1644d56023033b6d32b70afb7a48b224ec3d82ae4a4f",
+          "sourceTxIndex": 0,
+          "value": "4924799649906",
+        },
+      ],
+      "inputs_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "value": "4924799649906",
+          },
+        },
+      },
+      "outputs": Array [
+        Object {
+          "address": "DdzFFzCqrhsxVv8Sjuj35Zkw42T9WjwXa6DasrNknm5M3bPVDnWJWwhX5NymoZncUArTfFYZ9sYGaA9htKSNYoK5Vkzx2vUtunAFt3eE",
+          "index": 0,
+          "value": "4824799478660",
+        },
+        Object {
+          "address": "DdzFFzCqrhskotfhVwhLvNFaVGpA6C4yR9DXe56oEL4Ewmze51f1uQsc1cQb8qUyqgzjUPBgFZiVbuQu7BaXrQkouyvzjYjLqfJpKG5s",
+          "index": 1,
+          "value": "100000000000",
+        },
+      ],
+      "outputs_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "value": "4924799478660",
+          },
+        },
+      },
+      "size": 220,
+      "totalOutput": "4924799478660",
+      "withdrawals_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "amount": null,
+          },
+        },
+      },
+    },
+  ],
+}
+`;
+
+exports[`transactions metadata JSON object 1`] = `
+Object {
+  "transactions": Array [
+    Object {
+      "metadata": Array [
+        Object {
+          "key": "1",
+          "value": Object {
+            "Choices": Array [
+              Object {
+                "CandidateId": "aaa9503a-6fc5-46ea-9aa0-b4c90f361a4c",
+                "VoteRank": 1,
+                "VoteWeight": 1,
+              },
+              Object {
+                "CandidateId": "8d649c12-936e-46be-b65a-c17f30f59574",
+                "VoteRank": 2,
+                "VoteWeight": 1,
+              },
+              Object {
+                "CandidateId": "81ce7f8e-94c3-4835-91fc-2146d51fa1fc",
+                "VoteRank": 0,
+                "VoteWeight": 0,
+              },
+              Object {
+                "CandidateId": "407540aa-58b5-40ca-b484-f40040eb2990",
+                "VoteRank": 3,
+                "VoteWeight": 1,
+              },
+            ],
+            "NetworkId": "TheRealAdamDean",
+            "ObjectType": "VoteBallot",
+            "ProposalId": "80064c28-1b03-4f1c-abf0-ca8c5a98d5b9",
+            "VoterId": "d990a1e8-cb90-4f59-b5cf-a8b59c9ba8ae",
+          },
+        },
+        Object {
+          "key": "0",
+          "value": Object {
+            "La_RepsistancE": "Was here",
+          },
+        },
+      ],
+    },
+  ],
+}
+`;
+
+exports[`transactions metadata JSON string 1`] = `
+Object {
+  "transactions": Array [
+    Object {
+      "metadata": Array [
+        Object {
+          "key": "7",
+          "value": "http://scantrust/server_publickey.txt",
+        },
+        Object {
+          "key": "6",
+          "value": "kjfsdhgdjiksfedhdgjksdhfgjksdfhgjklsdhf",
+        },
+        Object {
+          "key": "5",
+          "value": "http://127.0.0.1/client_publickey.txt",
+        },
+        Object {
+          "key": "4",
+          "value": "dsfgdfsgsdfgsdfgsdfgdsfdfgdsfgdfgdfsgsdef",
+        },
+        Object {
+          "key": "3",
+          "value": "http://127.0.0.1/data.json",
+        },
+        Object {
+          "key": "2",
+          "value": "sha256",
+        },
+        Object {
+          "key": "1",
+          "value": "454654654564564654",
+        },
+        Object {
+          "key": "0",
+          "value": "MelDemo1",
+        },
+      ],
+    },
+  ],
+}
+`;
+
+exports[`transactions transactions with tokens shows the tokens minted and output 1`] = `
+Object {
+  "transactions": Array [
+    Object {
+      "block": Object {
+        "number": 5406748,
+      },
+      "blockIndex": 8,
+      "deposit": 0,
+      "fee": 1000000,
+      "hash": "e252be4c7e40d35919f741c9649ff207c3e49d53bb819e5c1cb458055fd363ed",
+      "inputs": Array [
+        Object {
+          "address": "addr1qxrmuatfdt49ndqmxeq46zmu3daqcg078h26vwfe4nau8gpgtal0gcphul7kruzdrx6v4w78la7z5luz0xs375zz922sege8ks",
+          "sourceTxHash": "d9a8ae2194e2e25e8079a04a4694e2679464a4f51512863a0008a35a85762ff0",
+          "sourceTxIndex": 0,
+          "value": "5000000",
+        },
+      ],
+      "inputs_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "value": "5000000",
+          },
+        },
+      },
+      "mint": Array [
+        Object {
+          "asset": Object {
+            "assetId": "00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e",
+            "assetName": "6e7574636f696e",
+            "policyId": "00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae",
+          },
+          "quantity": "1",
+        },
+      ],
+      "outputs": Array [
+        Object {
+          "address": "addr1qxrmuatfdt49ndqmxeq46zmu3daqcg078h26vwfe4nau8gpgtal0gcphul7kruzdrx6v4w78la7z5luz0xs375zz922sege8ks",
+          "index": 0,
+          "tokens": Array [
+            Object {
+              "asset": Object {
+                "assetId": "00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae6e7574636f696e",
+                "assetName": "6e7574636f696e",
+                "policyId": "00000002df633853f6a47465c9496721d2d5b1291b8398016c0e87ae",
+              },
+              "quantity": "1",
+            },
+          ],
+          "value": "4000000",
+        },
+      ],
+      "outputs_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "value": "4000000",
+          },
+        },
+      },
+      "size": 453,
+      "totalOutput": "4000000",
+      "withdrawals_aggregate": Object {
+        "aggregate": Object {
+          "sum": Object {
+            "amount": null,
+          },
+        },
+      },
+    },
+  ],
+}
+`;

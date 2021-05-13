@@ -1,0 +1,57 @@
+query keyNetworkInfo {
+  genesis {
+    byron {
+      blockVersionData {
+        scriptVersion
+        slotDuration
+        maxBlockSize
+        maxHeaderSize
+        maxProposalSize
+        maxTxSize
+      }
+      startTime
+      protocolConsts {
+        k
+        protocolMagic
+      }
+    }
+    shelley {
+      activeSlotsCoeff
+      epochLength
+      genDelegs
+      initialFunds
+      maxKESEvolutions
+      maxLovelaceSupply
+      networkId
+      networkMagic
+      protocolParams {
+        a0
+        decentralisationParam
+        eMax
+        extraEntropy
+        keyDeposit
+        maxBlockBodySize
+        maxBlockHeaderSize
+        maxTxSize
+        minFeeA
+        minFeeB
+        minPoolCost
+        minUTxOValue
+        nOpt
+        poolDeposit
+        protocolVersion
+        rho
+        tau
+      }
+      securityParam
+      slotLength
+      slotsPerKESPeriod
+      staking {
+        pools
+        stake
+      }
+      systemStart
+      updateQuorum
+    }
+  }
+}
