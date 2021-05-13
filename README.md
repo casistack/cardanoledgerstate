@@ -107,7 +107,9 @@ if you already have a prom file configured to display adapools data on grafana
 
 https://crypto2099.io/adding-pool-stats-to-grafana-dashboard/
 
-all i did was use JQ  to extract data from leader logs
+all i did was use JQ  to extract data from leader logs.
+
+Note this has only been tested with one slot assigned in mind. Code may need modifications for multiple slots. 
 
 edit the addleader.sh to match your environment
 
@@ -125,7 +127,11 @@ edit the addleader.sh to match your environment
   Note . if you have no slot assigned output will  be " No data"
   
   
-- 
+## Setup cron to update Grafana with assigned status
+
+- e.g to setup cron to update every 7mins
+
+*/7 * * * * /full path/addleader.sh
 
 
 
