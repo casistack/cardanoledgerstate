@@ -1,5 +1,5 @@
 #!/bin/bash
-WORKINGDIRFILES =  ""  # change full path to match your working dir
+WORKINGDIRFILES=""  # change full path to match your working dir
 cd $WORKINGDIRFILES
 HOST='provide host name or ip of ftp server'
 USER='provide username'

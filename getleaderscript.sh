@@ -5,8 +5,8 @@
 #you can get this by manually running NETWORK=mainnet docker-compose -f docker-compose.yml up -d
 #then docker ps to  get the container name 
 #after run NETWORK=mainnet docker-compose -f docker-compose.yml  down  to cleanup before scheduling script
-CONTAINERNAME = cardanoledgerstate_cardano-node_1
-WORKINGDIR = /absolute path to working directory/ #replace path to your working directory
+CONTAINERNAME="cardanoledgerstate_cardano-node_1"
+WORKINGDIR="/absolute path to working directory/" #replace path to your working directory
 cd $WORKINGDIR
 FILE=$WORKINGDIR/node-mainnet-ipc/node.socket
 NETWORK=mainnet docker-compose -f $WORKINGDIR/docker-compose.yml up -d

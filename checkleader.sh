@@ -1,6 +1,6 @@
 #!/bin/bash
-WORKINGDIR = " "  # enter full absolute path to working dir
-FTPHOST = " "       # enter ftp server hostname or IP
+WORKINGDIR=" "  # enter full absolute path to working dir
+FTPHOST=" "       # enter ftp server hostname or IP
 cd $WORKINGDIR
 # remove previous dump if any
 rm -f $WORKINGDIR/ledger.json
