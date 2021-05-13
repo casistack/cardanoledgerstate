@@ -5,6 +5,8 @@ It can also be used for the automation to check leader logs in combination with
 
 and to update grafana dashboard with a slot leader status.
 
+The repo contails files and folders from IOHK Graphql docker build but technically the only files required for this ar the .sh and docker-compose.yml files.
+
 #### Note: 
 This was a quick put together, aka spaghetti code and therefore security and fine tuning has not been taking into consideration . 
 I have chosen to use FTP as the server for the ledgerstate uploads, however to make it secure , ftps or ssh using public keys could be used. 
