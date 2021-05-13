@@ -1,6 +1,7 @@
 # cardanoledgerstate Downloads
 This was quickly created to help those who have limited memory on their cardano-nodes and therefore downloading the ledger state (cardano-cli query ledger-state --mainnet --out-file ledger.json) sometimes exhausts resources on nodes. 
-It can also be used for the automation to check leader logs in combination with[ Andrews cncli application] (https://github.com/AndrewWestberg/cncli/blob/develop/USAGE.md)
+It can also be used for the automation to check leader logs in combination with
+[Andrews cncli application](https://github.com/AndrewWestberg/cncli/blob/develop/USAGE.md)
 
 and to update grafana dashboard with a slot leader status.
 
