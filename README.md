@@ -8,6 +8,10 @@ I have chosen to use FTP as the server for the ledgerstate uploads, however to m
 Modify this accordingly to suite your needs.
 The comms between all my nodes and transfer is locked down to specific IP's and ports. 
 
+This repo clone includes some IOHK files used to build docker images. Technically , the only files required are the .sh a, docker-compose.yml
+
+
+
 ### Automation steps achived
 
 1. using cron , create and start a cardano-node on mainnet
@@ -34,6 +38,8 @@ The comms between all my nodes and transfer is locked down to specific IP's and 
 
 ## Steps
 
+While this guide was configured using Linux users in mind, the is no reason why it cannot be adapted for Windows or Mac users.
+
 - setup remote ftp server if you dont already have
 - -windows users can download a free ftp server https://www.serv-u.com/ftp-server-windows/server-setup#:~:text=Setting%20up%20an%20FTP%20site,-Navigate%20to%20Start&text=Once%20the%20IIS%20console%20is,click%20on%20Add%20FTP%20Site.&text=In%20the%20Binding%20and%20SSL,Start%20FTP%20Site%20Automatically%20option.
 - - linux users know what to do . I use proftpd
@@ -44,4 +50,18 @@ The comms between all my nodes and transfer is locked down to specific IP's and 
  git clone  https://github.com/casistack/cardanoledgerstate.git && cd cardanoledgerstate
  - 
  
- - edit the getleaderscript.sh paying attention to change anything  
+ - edit the getleaderscript.sh paying attention to change anything  thats custom to your environment
+ - edit the ftpleader.sh to match you setup
+ - install docker and docker-compose if not already installed
+ 
+ https://docs.docker.com/compose/install/
+ https://docs.docker.com/engine/install/
+ 
+ 
+
+## Manually test before setting up cron schedule
+
+- The docker image is set to download at the time of the readme , cardano full node (1.26.2). you can edit the docker-compose.yml section 
+ image: inputoutput/cardano-node:${CARDANO_NODE_VERSION:-1.26.2} to change the image pulled.
+ 
+ - manually run the getleaderscript.sh script ./getleaderscript.sh  ( ensure your scripts are executable first if you get any errors chmod +x )
