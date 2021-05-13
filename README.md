@@ -46,16 +46,15 @@ This repo clone includes some IOHK files used to build docker images. Technicall
 ## Steps for FTP upload
 
 While this guide was configured using Linux users in mind, there is no reason why it cannot be adapted for Windows or Mac users.
-For windows users, you might be able to adapt it using the windows subsystem for linux https://docs.microsoft.com/en-us/windows/wsl/install-win10
+For windows users, you might be able to adapt it using the [windows subsystem for linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 ie ubuntu from the Microsoft store. 
 
 Better yet use ubuntu in a VM .
 
 - setup remote ftp server if you dont already have
-- -windows users can download a free ftp server https://www.serv-u.com/ftp-server-windows/server-setup#:~:text=Setting%20up%20an%20FTP%20site,-Navigate%20to%20Start&text=Once%20the%20IIS%20console%20is,click%20on%20Add%20FTP%20Site.&text=In%20the%20Binding%20and%20SSL,Start%20FTP%20Site%20Automatically%20option.
+- -windows users can download a [free ftp server](https://www.serv-u.com/ftp-server-windows/server-setup#:~:text=Setting%20up%20an%20FTP%20site,-Navigate%20to%20Start&text=Once%20the%20IIS%20console%20is,click%20on%20Add%20FTP%20Site.&text=In%20the%20Binding%20and%20SSL,Start%20FTP%20Site%20Automatically%20option.)
 - - linux users know what to do . I use proftpd
-- if you chose to use ssh instead ( recommended) configure using public key auth 
- https://serverpilot.io/docs/how-to-use-ssh-public-key-authentication/
+- if you chose to use ssh instead ( recommended) configure using [public key auth](https://serverpilot.io/docs/how-to-use-ssh-public-key-authentication/)
  
  - Clone this repo https://github.com/casistack/cardanoledgerstate.git from the shell 
  git clone  https://github.com/casistack/cardanoledgerstate.git && cd cardanoledgerstate
@@ -65,8 +64,8 @@ Better yet use ubuntu in a VM .
  - edit the ftpleader.sh to match you setup
  - install docker and docker-compose if not already installed
  
- https://docs.docker.com/compose/install/
- https://docs.docker.com/engine/install/
+ [docker-compose](https://docs.docker.com/compose/install/)
+ [docker](https://docs.docker.com/engine/install/)
  
  
 
@@ -94,7 +93,7 @@ modify full path accordingly to match the files containing the scripts. Importan
 - checkleader.sh   (copy this file to you node and amend to match your environment)
 - on your node mkdir to host the script or use exsting directory
 - ensure you have cncli configured and fullign synced. ideally you will have it confiured as a systemdservice 
-REF Andrew's work https://github.com/AndrewWestberg/cncli/blob/develop/USAGE.md
+[REF Andrew's work](https://github.com/AndrewWestberg/cncli/blob/develop/USAGE.md)
 - for downloading the ledgerstate from ftp, i allowed anonymous access to ftp server . you can modify to match your environment.
 - edit the checkleader.sh  make sure you use full path to where your files are located or cron will fail
 - after editting, manually run ./checkleader.sh this and cat leaderledger.json to ensure it works as desired.
@@ -111,7 +110,7 @@ To get leader logs at 2.30 am and dump out configure similar to above
 
 if you already have a prom file configured to display adapools data on grafana
 
-https://crypto2099.io/adding-pool-stats-to-grafana-dashboard/
+[Adding Adapool stats to Grafana](https://crypto2099.io/adding-pool-stats-to-grafana-dashboard/)
 
 all i did was use JQ  to extract data from leader logs.
 
