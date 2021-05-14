@@ -125,6 +125,12 @@ To get leader logs at 2.30 am and dump out configure similar to above
 
 30 2 * * * /bin/bash /fullpath/checkleader.sh > /full path for logs/checkleaderlogging.log
 
+if you rather check the next epoch using cncli next option (cncli-leaderlog.sh next UTC)
+you could schecdule the cronjob to run only when the checkfivedays.sh returns true
+
+e.g
+30 2 * * * /bin/bash /fullpath/checkfivedays.sh && /fullpath/checkleader.sh > /full path for logs/checkleaderlogging.log
+
 ## Integrating with Grafana
 
 if you already have a prom file configured to display adapools data on grafana
