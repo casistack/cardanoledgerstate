@@ -20,4 +20,4 @@ echo "getting ledger to json .."
 #set current , prev or next . refer to cncli documentation. 
 #set your prefered timezone
 #set path to where the output will be dumped
-/full path/cncli leaderlog -d /full path/cncli.db --pool-id "your pool id" --pool-vrf-skey /full path/vrf.skey --byron-genesis /home/cardanogoglop/cardano-my-node/mainnet-byron-genesis.json --shelley-genesis /full path/mainnet-shelley-genesis.json --ledger-state /full path/ledger.json --ledger-set current --tz Europe/London 2>&1 | tee /full path/leaderledger.json 
+/full path/cncli leaderlog -d /full path/cncli.db --pool-id "your pool id" --pool-vrf-skey /full path/vrf.skey --byron-genesis /full path/mainnet-byron-genesis.json --shelley-genesis /full path/mainnet-shelley-genesis.json --ledger-state /full path/ledger.json --ledger-set current --tz Europe/London 2>&1 | tee /full path/leaderledger.json 
